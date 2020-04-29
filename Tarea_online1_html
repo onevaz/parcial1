@@ -22,4 +22,63 @@
         <script src="app.js"></script>
     </body>
 </html>
+ JS
+ class Rectangulo{
+    constructor(base,altura){
+        this.base=base;
+        this.altura=altura;
+    }
+    area(){
+        return this.base*this.altura;
+    }
+}
+class Triangulo{
+    constructor(base,altura){
+        this.base=base;
+        this.altura=altura;
+    }
+    area2(){
+        return this.base*this.altura/2;
+    }
+}
+class Cuadrado{
+    constructor(base){
+        this.base=base;
+    }
+    area3(){
+        return this.base*this.base;
+    }
+}
+const b1=document.getElementById("btnRectangulo");
+b1.addEventListener('click',()=>{
+let base=document.getElementById("base").value;
+let altura=document.getElementById("altura").value;
+base=parseInt(base);
+altura=parseInt(altura);
+let rect1=new Rectangulo (base,altura);
+let divRes=document.getElementById("resultados");
+divRes.innerHTML="<p> Rectangulo con base " + rect1.base + " y altura " + rect1.altura + "</p>";
+divRes.innerHTML+="<p>con un area de " + rect1.area() + "</p>";
+});
 
+const b2=document.getElementById("btnTriangulo");
+b2.addEventListener('click',()=>{
+let base=document.getElementById("base").value;
+let altura=document.getElementById("altura").value;
+base=parseInt(base);
+altura=parseInt(altura);
+let tria1=new Triangulo (base,altura);
+let divRes=document.getElementById("resultados");
+divRes.innerHTML="<p> Triangulo con base " + tria1.base + " y altura " + tria1.altura + "</p>";
+divRes.innerHTML+="<p>con un area de " + tria1.area2() + "</p>";
+});
+
+const b3=document.getElementById("btnCuadrado");
+b3.addEventListener('click',()=>{
+let base=document.getElementById("base").value;
+base=parseInt(base);
+let cuad1=new Cuadrado (base);
+let divRes=document.getElementById("resultados");
+divRes.innerHTML="<p> Cuadrado con lado de " + cuad1.base + "</p>";
+divRes.innerHTML+="<p>con un area de "+ cuad1.area3() + "</p>";
+});
