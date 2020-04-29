@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tarea1</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Calculo de Area</h1>
+            <h3>Creación de area de triangulos</h3>
+            <label for="base">Base</label>
+            <input type="text" id="base" placeholder="ingresa la base">
+            <label for="altura">Altura</label>
+            <input type="text" id="altura" placeholder="Ingresa la altura">
+            <button id="btnRectangulo">Area rectangulo</button>
+            <button id="btnCuadrado">Area cuadrado</button>
+            <button id="btnTriangulo">Area triangulo</button>
+            <div id="resultados">
+
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
 
